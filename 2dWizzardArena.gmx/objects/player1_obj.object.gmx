@@ -452,11 +452,14 @@ yaxis = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dir1 = point_direction(0, 0, xaxis, yaxis);
-
+            <string>///Controls
+//Xbox controls
+var dir1 = point_direction(0, 0, xaxis, yaxis);
+var dir2 = round(point_direction(x,y, player1_obj.x,player1_obj.y)/90)*90
 scr_get_gampad_input(0);
 
 scr_move_axis(xaxis, yaxis, 0.25, 16);
+
 
 if ((gamepad_button_check_pressed(0, gp_face1)) == true &amp;&amp; mp_current &gt;= 20){
     action_create_object_motion(spell1_obj, player1_obj.x+(xaxis*20), player1_obj.y+(yaxis*20), 35, dir1);
@@ -467,103 +470,61 @@ if ((gamepad_button_check_pressed(0, gp_face2)) == true &amp;&amp; mp_current &g
     mp_current -= 20;
    }
 if ((gamepad_button_check_pressed(0, gp_face3)) == true &amp;&amp; mp_current &gt;= 100){
-    action_create_object_motion(spell3_obj, player1_obj.x+(xaxis*20), player1_obj.y+(yaxis*20), 15, dir1);
+    action_create_object_motion(spell3_obj, player1_obj.x+(xaxis*20), player1_obj.y+(yaxis*20), 8, dir1);
     mp_current -= 100;
    }
-if ((gamepad_button_check_pressed(0, gp_face4)) == true &amp;&amp; mp_current &gt;= 100){
+if ((gamepad_button_check_pressed(0, gp_face4)) == true &amp;&amp; mp_current &gt;= 75){
         {
         var i;
-            for (i = 0; i &lt; 20; i += 1)
+            for (i = 0; i &lt; 10; i += 1)
              {
-                action_create_object_motion(spell4_obj, player1_obj.x+((xaxis*20)+random_range(0, 100)), player1_obj.y+((yaxis*20)+random_range(0, 100)), 15, dir1);
+                action_create_object_motion(spell4_obj, player1_obj.x+((xaxis*20)+random_range(0, 150)), player1_obj.y+((yaxis*20)+random_range(0, 150)), 4, dir1);
              }
         }
     
+    mp_current -= 75;
+   }
+// Keyboard controlls
+if (keyboard_check(vk_left)) {
+x -= 9;
+}
+
+if (keyboard_check(vk_right)) {
+x += 9;
+}
+
+if (keyboard_check(vk_up)) {
+player1_obj.y -= 9;
+}
+
+if (keyboard_check(vk_down)) {
+player1_obj.y += 9;
+}
+
+if (keyboard_check_pressed(ord('A')) == true &amp;&amp; mp_current &gt;= 20){
+    action_create_object_motion(spell1_obj, player1_obj.x+(hspeed*20), player1_obj.y+(vspeed*20), 35, dir2);
+    mp_current -= 20;
+   }
+if (keyboard_check_pressed(ord('S')) == true &amp;&amp; mp_current &gt;= 20){
+    action_create_object_motion(spell2_obj, player1_obj.x+(hspeed*20), player1_obj.y+(vspeed*20), 45, dir2);
+    mp_current -= 20;
+   }
+if (keyboard_check_pressed(ord('D')) == true &amp;&amp; mp_current &gt;= 100){
+    action_create_object_motion(spell3_obj, player1_obj.x+(hspeed*20), player1_obj.y+(vspeed*20), 8, dir2);
     mp_current -= 100;
    }
+if (keyboard_check_pressed(ord('F')) == true &amp;&amp; mp_current &gt;= 75){
+        {
+        var i;
+            for (i = 0; i &lt; 10; i += 1)
+             {
+                action_create_object_motion(spell4_obj, player1_obj.x+((hspeed*20)+random_range(0, 150)), player1_obj.y+((vspeed*20)+random_range(0, 150)), 4, dir2);
+             }
+        }
+}
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="spell2_obj">
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hp_current</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>-14</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="4" ename="spell1_obj">
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hp_current</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>-30</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="8" enumb="0">

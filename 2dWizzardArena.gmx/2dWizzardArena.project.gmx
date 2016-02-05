@@ -30,7 +30,6 @@
     <object>objects\spell3_obj</object>
     <object>objects\spell4_obj</object>
     <object>objects\spell2_obj</object>
-    <object>objects\object4</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

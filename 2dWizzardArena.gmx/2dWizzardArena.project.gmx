@@ -15,12 +15,14 @@
     <sprite>sprites\Bluespell_spr</sprite>
     <sprite>sprites\Greenspell_spr</sprite>
     <sprite>sprites\StarSpell_spr</sprite>
+    <sprite>sprites\sprite9</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_gampad_input.gml</script>
     <script>scripts\scr_move_axis.gml</script>
+    <script>scripts\scr_received_packet.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\player1_obj</object>
@@ -30,9 +32,16 @@
     <object>objects\spell3_obj</object>
     <object>objects\spell4_obj</object>
     <object>objects\spell2_obj</object>
+    <object>objects\server_obj</object>
+    <object>objects\client_obj</object>
+    <object>objects\obj_click</object>
+    <object>objects\roomselect_obj</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\ROOM_SELECTOR</room>
     <room>rooms\room0</room>
+    <room>rooms\SERVER</room>
+    <room>rooms\CLIENT</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

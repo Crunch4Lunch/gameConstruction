@@ -318,8 +318,8 @@
     <instance objName="obj_solid" x="1376" y="224" name="inst_9F984CB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="1376" y="192" name="inst_E7B1FD11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="1344" y="192" name="inst_143974A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="player2_obj" x="1792" y="512" name="inst_BECEAE4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="server_obj" x="128" y="160" name="inst_1524ABC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="enemy_obj" x="1408" y="96" name="inst_8315C024" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="288" y="384" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_41AD055E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

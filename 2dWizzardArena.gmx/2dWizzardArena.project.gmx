@@ -18,6 +18,7 @@
     <sprite>sprites\sprite9</sprite>
     <sprite>sprites\minespell_spr</sprite>
     <sprite>sprites\enemy_spr</sprite>
+    <sprite>sprites\sprite12</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

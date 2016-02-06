@@ -209,7 +209,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>action_create_object_motion(yellowmines_obj,x, y, 1,random_range(0, 360) );
+            <string>action_create_object_motion(yellowmines_obj,x, y, 1.5,random_range(0, 360) );
 </string>
           </argument>
         </arguments>

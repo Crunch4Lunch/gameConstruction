@@ -505,11 +505,11 @@ yaxis = 0;
 var dir1 = point_direction(0, 0, xaxis, yaxis);
 var dir2 = 0; 
 var mp1 = 30;
-var mp2 = 18;
+var mp2 = 20;
 var mp3 = 100;
-var mp4 = 85;
-var mp5 = 75 ;
-var starn = 10;
+var mp4 = 100;
+var mp5 = 90 ;
+var starn = 15;
 
 scr_get_gampad_input(0);
 
@@ -755,7 +755,7 @@ mosY = mouse_y
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-20</string>
+            <string>-33</string>
           </argument>
         </arguments>
       </action>
